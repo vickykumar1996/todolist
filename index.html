@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(13deg , #072062 , #4c085f);
+            background-size: 100vw 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #notepad{
+            background-color: white;
+            width: 550px;
+            height: 600px;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        h1{
+            text-align: center;
+            color: #072062;
+        }
+        #add-task{
+            width: 90%;
+            margin: 20px auto;
+            color: black;
+        }
+        #add-task input{
+            background-color: #ececec;
+            width: 70%;
+            height: 60px;
+            padding-left: 20px;
+            border: none;
+            border-radius: 30px;
+            font-size: 17px;
+        }
+        #add-task input:focus{
+            outline: none;
+        }
+        #add-task button{
+            background-color: coral;
+            width: 29%;
+            height: 60px;
+            border: solid 2px coral;
+            border-radius: 30px;
+            transform: translate(-40%);
+            font-size: 17px;
+            font-weight: 700;
+            color: white;
+            transition: 0.2s;
+        }
+        #add-task button:active{
+            background-color: white;
+            color: coral;
+        }
+
+        #task-list{
+            width: 100%;
+            height: 420px;
+            padding: 10px;
+            overflow: auto;
+        }
+        .task{
+            width: 100%;
+            height: auto;
+            margin: 8px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 25px;
+        }
+        .details{
+            display: flex;
+            align-items: center;
+        }
+        .details button{
+            padding: 5px 7px;
+            margin-right: 15px;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+        .task>button{
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+        }
+
+        .completed .details button{
+            background-color: #c1c1c1;
+        }
+        .completed .details span{
+            color: #c1c1c1;
+            text-decoration: line-through;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div id="notepad">
+        <h1>To-Do List 📘  </h1>
+
+        <div id="add-task">
+            <input type="text" id="inp" placeholder="Add your task">
+            <button onclick="addTask()">ADD</button>
+        </div>
+
+        <div id="task-list">
+           
+        </div>
+    </div> 
+
+    <script src="./To do app.js"></script>
+
+</body>
+</html>
